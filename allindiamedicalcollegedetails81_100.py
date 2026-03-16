@@ -173,11 +173,11 @@ def scrape_college_info(driver,URLS):
 
     # ================= LOCATION + CITY =================
     try:
-    loc = driver.find_element(By.CSS_SELECTOR, "span.f90eb6").text
-    if "," in loc:
-        l, c = loc.split(",", 1)
-        data["college_info"]["location"] = l.strip()
-        data["college_info"]["city"] = c.strip()
+        loc = driver.find_element(By.CSS_SELECTOR, "span.f90eb6").text
+        if "," in loc:
+            l, c = loc.split(",", 1)
+            data["college_info"]["location"] = l.strip()
+            data["college_info"]["city"] = c.strip()
     except:
         pass
 
